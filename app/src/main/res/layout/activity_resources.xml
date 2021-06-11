@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+
+android:fitsSystemWindows="true"
+
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<com.google.android.material.appbar.AppBarLayout
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:fitsSystemWindows="true"
+    app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:contentScrim="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
+        app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
+
+        app:toolbarId="@+id/toolbar">
+
+        <ImageView
+            android:id="@+id/app_bar_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gradient" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"></androidx.appcompat.widget.Toolbar>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="186dp"
+                android:layout_height="83dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/snhulogo_wy"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="83dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:text="Wellness Center"
+                android:textAlignment="center"
+                android:textColor="#F3C94D"
+                android:textSize="30sp"
+                android:paddingLeft="20dp"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+</com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/gradient"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="#011f4b"
+                android:gravity="center"
+                android:text="Resources"
+                android:textColor="#F3C94D"
+                android:textSize="36sp" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#F3C94D"
+                android:src="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btn_insomnia"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/transparent"
+                android:drawablePadding="10dp"
+                android:drawableTint="#F3C94D"
+                android:paddingStart="40dp"
+                android:text="Insomnia"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="#F3C94D"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="#87aeb4"
+                android:src="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btn_depression"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/transparent"
+                android:drawablePadding="10dp"
+                android:drawableTint="#F3C94D"
+                android:paddingStart="40dp"
+                android:text="Depression"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="#F3C94D"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="#87aeb4"
+                android:src="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btn_eatingdisorder"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/transparent"
+                android:drawablePadding="8dp"
+                android:drawableTint="#F3C94D"
+                android:paddingStart="40dp"
+                android:text="Eating Disorders"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="#F3C94D"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="#87aeb4"
+                android:src="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btn_homesick"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/transparent"
+                android:drawablePadding="10dp"
+                android:drawableTint="#F3C94D"
+                android:paddingStart="40dp"
+                android:text="Home Sickness"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="#F3C94D"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="#87aeb4"
+                android:src="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btn_drugalcohol"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/transparent"
+                android:drawablePadding="5dp"
+                android:drawableTint="#F3C94D"
+                android:paddingStart="25dp"
+                android:text="Drug/Alcohol addiction"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="#F3C94D"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="#87aeb4"
+                android:src="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btn_anger"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/transparent"
+                android:drawablePadding="5dp"
+                android:drawableTint="#F3C94D"
+                android:paddingStart="40dp"
+                android:text="Anger"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="#F3C94D"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="#87aeb4"
+                android:src="?android:attr/listDivider" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"/>
+            </LinearLayout>
+
+
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp" />
+
+    "
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

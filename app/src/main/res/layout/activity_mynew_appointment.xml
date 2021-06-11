@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+Context =".MynewAppointment" >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:fitsSystemWindows="true"
+        app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
+
+            app:toolbarId="@+id/toolbar">
+
+            <ImageView
+                android:id="@+id/app_bar_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gradient" />
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="186dp"
+                    android:layout_height="83dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    app:srcCompat="@drawable/snhulogo_wy" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="83dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:text="Wellness Center"
+                    android:textAlignment="center"
+                    android:textColor="#F3C94D"
+                    android:textSize="30sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/gradient"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#011f4b"
+                android:gravity="center"
+                android:text="Appointments"
+                android:textColor="#F3C94D"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/gradient"
+                    android:gravity="center"
+                    android:text="Appointment booked successfully."
+                    android:textAllCaps="false"
+                    android:textColor="@color/Mytext_white"
+                    android:textSize="18sp" />
+                <!--  <Button
+                          android:layout_width="200dp"
+                          android:layout_height="50dp"
+                          android:background="#f3c64d"
+                          android:gravity="center"
+                          android:text="Upcoming"
+                          android:textAllCaps="false"
+                          android:textColor="@color/Mytext_white"
+                          android:textSize="18sp" />
+
+                      <Button
+                          android:layout_width="fill_parent"
+                          android:layout_height="50dp"
+                          android:background="@drawable/gradient"
+                          android:gravity="center"
+                          android:text="Past"
+                          android:textAllCaps="false"
+                          android:textColor="#F3C94D"
+                          android:textSize="18sp" /> -->
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="250dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#F3C94D"
+                android:src="?android:attr/listDivider" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:strokeColor="#F3C94D"
+                app:strokeWidth="2dp">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient"
+                    android:columnCount="4"
+                    android:horizontalSpacing="5dp"
+                    android:padding="16dp"
+                    android:rowCount="3"
+                    android:verticalSpacing="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="16dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="16dp"
+                            android:text="DEC"
+                            android:textColor="@color/Mytext_white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="16dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="16dp"
+                            android:text="23"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="36sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="16dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="16dp"
+                            android:text="WED"
+                            android:textColor="@color/Mytext_white"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="2dp"
+                        android:layout_height="170dp"
+                        android:layout_rowSpan="3"
+                        android:layout_margin="16dp"
+                        android:background="#f3c64d"
+                        android:padding="16dp" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Timings"
+                                android:textAlignment="center"
+                                android:textColor="@color/Mytext_white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Appointment Type"
+                                android:textAlignment="center"
+                                android:textColor="@color/Mytext_white"
+                                android:textSize="12sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="11:30 AM"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Health"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18sp" />
+
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp">
+
+                            <View
+                                android:id="@+id/divider2"
+                                android:layout_width="137dp"
+                                android:layout_height="2dp"
+                                android:layout_span="2"
+                                android:background="#F3C64D"
+                                android:padding="16dp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Provider"
+                                android:textAlignment="center"
+                                android:textColor="@color/Mytext_white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Duration"
+                                android:textAlignment="center"
+                                android:textColor="@color/Mytext_white"
+                                android:textSize="14sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Emily Warker"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="30 mins"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18sp" />
+
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp">
+
+                            <View
+                                android:id="@+id/divider3"
+                                android:layout_width="137dp"
+                                android:layout_height="2dp"
+                                android:layout_span="2"
+                                android:background="#F3C64D"
+                                android:padding="16dp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Reason:"
+                                android:textColor="@color/Mytext_white"
+                                android:textSize="14sp" />
+
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_span="2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Cold, cough and fever"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18sp" />
+
+
+                        </TableRow>
+                    </TableLayout>
+
+
+                </GridLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

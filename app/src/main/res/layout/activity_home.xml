@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".Home">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_scrollFlags="scroll|enterAlways|snap">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/logo_img"
+                android:layout_width="186dp"
+                android:layout_height="83dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/snhulogo_wy"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="83dp"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:text="Wellness Center"
+                android:textAlignment="center"
+                android:textColor="#F3C94D"
+                android:textSize="30sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:shrinkColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:showDividers="middle|beginning|end">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    app:dividerPadding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_health"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rsz_nurse4"
+                        android:paddingBottom="10dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_health"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:text="Health"
+                        android:textSize="18sp"
+                        android:textColor="#F3C94D"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical"
+                    app:dividerPadding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_counseling"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rsz_counselling5"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_counseling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Counselling"
+                        android:textSize="18sp"
+                        android:textColor="#F3C94D"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </TableRow>
+
+              <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="100dp"
+                 android:showDividers="middle|beginning|end">
+
+                 <androidx.appcompat.widget.LinearLayoutCompat
+                     android:layout_width="200dp"
+                     android:layout_height="200dp"
+                     android:orientation="vertical"
+                     app:dividerPadding="10dp">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:id="@+id/img_immun"
+                         android:layout_width="120dp"
+                         android:layout_height="120dp"
+                         android:layout_marginLeft="32dp"
+                         android:layout_marginTop="5dp"
+                         android:layout_marginRight="16dp"
+                         android:layout_marginBottom="5dp"
+                         android:background="@drawable/rsz_immunizations2"
+                         android:paddingBottom="10dp" />
+
+                     <androidx.appcompat.widget.AppCompatTextView
+                         android:id="@+id/tv_immun"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="40dp"
+                         android:text="Immunizations"
+                         android:textSize="18sp"
+                         android:textColor="#F3C94D"/>
+                 </androidx.appcompat.widget.LinearLayoutCompat>
+
+                 <androidx.appcompat.widget.LinearLayoutCompat
+                     android:layout_width="200dp"
+                     android:layout_height="200dp"
+                     android:layout_marginRight="16dp"
+                     android:orientation="vertical"
+                     app:dividerPadding="10dp">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:id="@+id/img_resources"
+                         android:layout_width="120dp"
+                         android:layout_height="120dp"
+                         android:layout_marginLeft="32dp"
+                         android:layout_marginTop="5dp"
+                         android:background="@drawable/rsz_education"
+                         android:paddingLeft="10dp"
+                         android:paddingRight="10dp" />
+
+                     <androidx.appcompat.widget.AppCompatTextView
+                         android:id="@+id/tv_resources"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="50dp"
+                         android:layout_marginTop="5dp"
+                         android:text="Resources"
+                         android:textColor="#F3C94D"
+                         android:textSize="18sp" />
+                 </androidx.appcompat.widget.LinearLayoutCompat>
+
+             </TableRow>
+
+           <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="100dp"
+                 android:showDividers="middle|beginning|end">
+
+                 <androidx.appcompat.widget.LinearLayoutCompat
+                     android:layout_width="200dp"
+                     android:layout_height="200dp"
+                     android:orientation="vertical"
+                     app:dividerPadding="10dp">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:id="@+id/img_eating"
+                         android:layout_width="120dp"
+                         android:layout_height="120dp"
+                         android:layout_marginLeft="32dp"
+                         android:layout_marginTop="5dp"
+                         android:layout_marginRight="16dp"
+                         android:layout_marginBottom="5dp"
+                         android:background="@drawable/rsz_healthyeating2"
+                         android:paddingBottom="10dp" />
+
+                     <androidx.appcompat.widget.AppCompatTextView
+                         android:id="@+id/tv_eating"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="40dp"
+                         android:text="Health Eating"
+                         android:textSize="18sp"
+                         android:textColor="#F3C94D"/>
+                 </androidx.appcompat.widget.LinearLayoutCompat>
+
+                 <androidx.appcompat.widget.LinearLayoutCompat
+                     android:layout_width="200dp"
+                     android:layout_height="200dp"
+                     android:layout_marginRight="16dp"
+                     android:orientation="vertical"
+                     app:dividerPadding="10dp">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:id="@+id/img_fitnesschallenge"
+                         android:layout_width="120dp"
+                         android:layout_height="120dp"
+                         android:layout_marginStart="32dp"
+                         android:layout_marginTop="5dp"
+                         android:background="@drawable/rsz_fitness2"
+                         android:paddingLeft="10dp"
+                         android:paddingRight="10dp" />
+
+                     <androidx.appcompat.widget.AppCompatTextView
+                         android:id="@+id/tv_fitnesschallenge"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="10dp"
+                         android:layout_marginTop="5dp"
+                         android:text="Fitness Challenge"
+                         android:textSize="18sp"
+                         android:textColor="#F3C94D"/>
+                 </androidx.appcompat.widget.LinearLayoutCompat>
+
+             </TableRow>
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="100dp"
+                 android:showDividers="middle|beginning|end">
+
+                 <androidx.appcompat.widget.LinearLayoutCompat
+                     android:layout_width="200dp"
+                     android:layout_height="200dp"
+                     android:orientation="vertical"
+                     app:dividerPadding="10dp">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:layout_width="120dp"
+                         android:layout_height="120dp"
+                         android:layout_marginLeft="32dp"
+                         android:layout_marginTop="5dp"
+                         android:layout_marginRight="16dp"
+                         android:layout_marginBottom="5dp"
+                         android:background="@drawable/labreports1"
+                         android:paddingBottom="10dp" />
+
+                     <androidx.appcompat.widget.AppCompatTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="50dp"
+                         android:text="Reports"
+                         android:textSize="18sp"
+                         android:textColor="#F3C94D"/>
+                 </androidx.appcompat.widget.LinearLayoutCompat>
+
+                 <androidx.appcompat.widget.LinearLayoutCompat
+                     android:layout_width="200dp"
+                     android:layout_height="200dp"
+                     android:layout_marginRight="16dp"
+                     android:orientation="vertical"
+                     app:dividerPadding="10dp">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:layout_width="120dp"
+                         android:layout_height="120dp"
+                         android:layout_marginStart="32dp"
+                         android:layout_marginTop="5dp"
+                         android:background="@drawable/rsz_prescription2"
+                         android:paddingLeft="10dp"
+                         android:paddingRight="10dp" />
+
+                     <androidx.appcompat.widget.AppCompatTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="50dp"
+                         android:layout_marginTop="5dp"
+                         android:text="Prescriptions"
+                         android:textSize="18sp"
+                         android:textColor="#F3C94D"/>
+                 </androidx.appcompat.widget.LinearLayoutCompat>
+
+             </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:showDividers="middle|beginning|end">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    app:dividerPadding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_staff"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rsz_staff"
+                        android:paddingBottom="10dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_ourstaff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="55dp"
+                        android:text="Our Staff"
+                        android:textColor="#F3C94D"
+                        android:textSize="18sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical"
+                    app:dividerPadding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_messages"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rsz_videocall2"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_messages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Virtual Care"
+                        android:textSize="18sp"
+                        android:textColor="#F3C94D"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </TableRow>
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="100dp"
+                 android:showDividers="middle|beginning|end">
+
+                 <androidx.appcompat.widget.LinearLayoutCompat
+                     android:layout_width="200dp"
+                     android:layout_height="200dp"
+                     android:orientation="vertical"
+                     app:dividerPadding="10dp">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:id="@+id/img_hours"
+                         android:layout_width="120dp"
+                         android:layout_height="120dp"
+                         android:layout_marginLeft="32dp"
+                         android:layout_marginTop="5dp"
+                         android:layout_marginRight="16dp"
+                         android:layout_marginBottom="5dp"
+                         android:background="@drawable/rsz_hours"
+                         android:paddingBottom="10dp" />
+
+                     <androidx.appcompat.widget.AppCompatTextView
+                         android:id="@+id/tv_hours"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="30dp"
+                         android:text="Working Hours"
+                         android:textColor="#F3C94D"
+                         android:textSize="18sp" />
+                 </androidx.appcompat.widget.LinearLayoutCompat>
+
+                 <androidx.appcompat.widget.LinearLayoutCompat
+                     android:layout_width="200dp"
+                     android:layout_height="200dp"
+                     android:layout_marginRight="16dp"
+                     android:orientation="vertical"
+                     app:dividerPadding="10dp">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:id="@+id/img_contact"
+                         android:layout_width="120dp"
+                         android:layout_height="120dp"
+                         android:layout_marginStart="32dp"
+                         android:layout_marginTop="5dp"
+                         android:background="@drawable/rsz_contactus"
+                         android:paddingLeft="10dp"
+                         android:paddingRight="10dp" />
+
+                     <androidx.appcompat.widget.AppCompatTextView
+                         android:id="@+id/tv_contact"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="50dp"
+                         android:layout_marginTop="5dp"
+                         android:text="Contact Us"
+                         android:textSize="18sp"
+                         android:textColor="#F3C94D"/>
+                 </androidx.appcompat.widget.LinearLayoutCompat>
+
+             </TableRow>
+
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="100dp"
+                 android:showDividers="middle|beginning|end">
+                 <androidx.appcompat.widget.AppCompatImageView
+                     android:id="@+id/img_dummy"
+                     android:layout_width="120dp"
+                     android:layout_height="120dp"
+                     android:layout_marginStart="32dp"
+                     android:layout_marginTop="5dp"
+                     android:paddingLeft="10dp"
+                     android:paddingRight="10dp" />
+
+             </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".BookAppointment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_scrollFlags="scroll|enterAlways|snap">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/logo_img"
+                android:layout_width="186dp"
+                android:layout_height="83dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/snhulogo_wy"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="83dp"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:text="Wellness Center"
+                android:textAlignment="center"
+                android:textColor="#F3C94D"
+                android:textSize="30sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:shrinkColumns="*">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:showDividers="middle|beginning|end">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:dividerPadding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_headerhealthappt"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/appt3"
+                        android:gravity="center"
+                        android:paddingStart="10dp" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_headerappt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:paddingStart="10dp"
+                        android:text="Book An Appointment"
+                        android:textColor="#F3C94D"
+                        android:textSize="24sp"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:showDividers="middle|beginning|end">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:dividerPadding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_patientname"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:text="Name:"
+                        android:textColor="#F3C94D"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/Mytext_white"
+                        android:textSize="18sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:showDividers="middle|beginning|end">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:dividerPadding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_studentid"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:text="Student ID:"
+                        android:textColor="#F3C94D"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_studentid"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+
+                        android:gravity="center_vertical"
+                        android:textColor="@color/Mytext_white"
+                        android:textSize="18sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:showDividers="middle|beginning|end">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:dividerPadding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:text="Appointment Date"
+                        android:textColor="#F3C94D"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_apptdate"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/Mytext_white"
+                        android:textSize="18sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:showDividers="middle|beginning|end">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:dividerPadding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:text="Appointment Time"
+                        android:textColor="#F3C94D"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_appttime"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/Mytext_white"
+                        android:textSize="18sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:showDividers="middle|beginning|end">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:dividerPadding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_provider"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:text="Provider:"
+                        android:textColor="#F3C94D"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_healthprovider"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:popupBackground="#F3C94D"
+                        android:textSize="18sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:showDividers="middle|beginning|end">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:dividerPadding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:text="Reason:"
+                        android:textColor="#F3C94D"
+                        android:textSize="18sp"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:showDividers="middle|beginning|end">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:dividerPadding="10dp">
+
+                    <EditText
+                        android:id="@+id/et_bookingreason"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:hint="reason for booking"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/Mytext_white"
+                        android:textColorHint="#88929c"
+                        android:textSize="14sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:showDividers="middle|beginning|end">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:dividerPadding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:showDividers="middle|beginning|end">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:dividerPadding="10dp">
+
+                    <Button
+                        android:id="@+id/btn_bookapptok"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="10dp"
+                        android:text="Confirm"
+                        android:background="#F3C94D"
+                        android:textSize="18sp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="40dp"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_bookapptcancel"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:text="Cancel"
+                        android:paddingLeft="17dp"
+                        android:background="#F3C94D"
+                        android:textSize="18sp"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginRight="40dp"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:showDividers="middle|beginning|end">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="horizontal"
+                    app:dividerPadding="10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:gravity="center_vertical"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

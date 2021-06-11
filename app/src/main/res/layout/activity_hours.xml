@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+
+            android:layout_height="120dp"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
+
+                app:toolbarId="@+id/toolbar">
+
+                <ImageView
+                    android:id="@+id/app_bar_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/gradient" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"></androidx.appcompat.widget.Toolbar>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="186dp"
+                        android:layout_height="83dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        app:srcCompat="@drawable/snhulogo_wy"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"/>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="83dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Wellness Center"
+                        android:textAlignment="center"
+                        android:textColor="#F3C94D"
+                        android:textSize="30sp"
+                        android:paddingLeft="20dp"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/gradient"
+
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context=".hours">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
+                    app:strokeColor="#F3C94D"
+                    app:strokeWidth="2dp">
+
+                    <TableLayout
+                        android:layout_width="320dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gradient"
+                        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+                        <TableRow
+                            android:layout_width="320dp"
+                            android:layout_height="50dp">
+
+                            <TextView
+                                android:layout_width="320dp"
+                                android:layout_height="50dp"
+                                android:layout_centerInParent="true"
+                                android:background="#011f4b"
+                                android:gravity="center"
+                                android:text="Working Hours"
+                                android:textColor="#F3C94D"
+                                android:textSize="24sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="320dp"
+                            android:layout_height="3dp"
+                            android:dividerPadding="10dp">
+
+                            <View
+                                android:id="@+id/divider3"
+                                android:layout_width="250dp"
+                                android:layout_height="1dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="#F3C94D"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:src="?android:attr/listDivider" />
+
+
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="10dp"
+                                    android:drawableTint="#F3C94D"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="10dp"
+                                    android:text="Monday:"
+                                    android:textColor="@color/Mytext_white"
+                                    android:textSize="18sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="10dp"
+                                    android:text="8 am to 4:30 pm"
+                                    android:textColor="#F3C94D"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="300dp"
+                            android:layout_height="50dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="10dp"
+                                    android:drawableTint="#F3C94D"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="10dp"
+                                    android:text="Tuesday:"
+                                    android:textColor="@color/Mytext_white"
+                                    android:textSize="18sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="10dp"
+                                    android:text="8 am to 6 pm"
+                                    android:textColor="#F3C94D"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="144dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="10dp"
+                                    android:drawableTint="#F3C94D"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="10dp"
+                                    android:text="Wednesday:"
+                                    android:textColor="@color/Mytext_white"
+                                    android:textSize="18sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="10dp"
+                                    android:text="8 am to 4:30 pm"
+                                    android:textColor="#F3C94D"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="10dp"
+                                    android:drawableTint="#F3C94D"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="10dp"
+                                    android:text="Thursday:"
+                                    android:textColor="@color/Mytext_white"
+                                    android:textSize="18sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="10dp"
+                                    android:text="8 am to 4:30 pm"
+                                    android:textColor="#F3C94D"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+                        </TableRow>
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="10dp"
+                                    android:drawableTint="#F3C94D"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="10dp"
+                                    android:text="Friday:"
+                                    android:textColor="@color/Mytext_white"
+                                    android:textSize="18sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="10dp"
+                                    android:text="8 am to 4:30 pm"
+                                    android:textColor="#F3C94D"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+                        </TableRow>
+                    </TableLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@android:drawable/ic_input_add"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
